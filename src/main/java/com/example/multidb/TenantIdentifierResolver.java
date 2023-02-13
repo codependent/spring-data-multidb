@@ -45,5 +45,6 @@ public class TenantIdentifierResolver implements CurrentTenantIdentifierResolver
 	@Override
 	public void customize(Map<String, Object> hibernateProperties) {
 		hibernateProperties.put(AvailableSettings.MULTI_TENANT_IDENTIFIER_RESOLVER, this);
+		hibernateProperties.put(AvailableSettings.MULTI_TENANT, "DATABASE");
 	}
 }

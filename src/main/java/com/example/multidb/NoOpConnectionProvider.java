@@ -74,5 +74,6 @@ public class NoOpConnectionProvider implements MultiTenantConnectionProvider, Hi
 	@Override
 	public void customize(Map<String, Object> hibernateProperties) {
 		hibernateProperties.put(AvailableSettings.MULTI_TENANT_CONNECTION_PROVIDER, this);
+		hibernateProperties.put(AvailableSettings.MULTI_TENANT, "DATABASE");
 	}
 }
